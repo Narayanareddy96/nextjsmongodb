@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import Button from './button/Button';
 
 const NavBar = () => {
   const [mobileMenu, setMobileMenu] = useState('hidden');
@@ -8,12 +9,6 @@ const NavBar = () => {
     setMobileMenu((prev) => (prev === '' ? 'hidden' : ''));
   };
   const menuItems = [
-    {
-      id: 1,
-      name: 'Home',
-      path: '/',
-      isActive: true,
-    },
     {
       id: 2,
       name: 'About',
@@ -57,10 +52,7 @@ const NavBar = () => {
               </Link>
             );
           })}
-
-          <button className="px-4 py-2 bg-white text-blue-600 font-semibold rounded hover:bg-blue-100">
-            Login
-          </button>
+          <Button title="Login" href="/dashboard/login" />
         </div>
       </div>
     </nav>
