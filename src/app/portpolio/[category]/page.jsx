@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Category = () => {
-  return <div>Category</div>;
+const Category = ({ params }) => {
+  return <div>{params.category}</div>;
 };
 
 export default Category;
